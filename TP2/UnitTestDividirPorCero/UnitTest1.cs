@@ -26,8 +26,9 @@ namespace UnitTestDividirPorCero
             //arrange
             int dividendo = 20;
             int divisor = 2;
+            int resultado;
             //act
-            float resultado = DividirExtensionMethod.DividirEnteros(dividendo,divisor);
+            resultado = DividirExtensionMethod.DividirEnteros(dividendo, divisor);
             //assert
             Assert.AreEqual(resultado, 10);
         }

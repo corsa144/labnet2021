@@ -20,9 +20,9 @@ namespace Entidades
             return numero;
         }
 
-        public static float Dividir(int dividendo, int divisor)
+        public static int Dividir(int dividendo, int divisor)
         {
-            float resultado = 0;
+            int resultado = 0;
             try
             {
                 //  resultado = dividendo / divisor;

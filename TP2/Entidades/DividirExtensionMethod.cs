@@ -8,7 +8,7 @@ namespace Entidades
 {
     public static class DividirExtensionMethod
     {
-        public static float DividirEnteros(this int dividendo, int divisor)
+        public static int DividirEnteros(this int dividendo, int divisor)
         {
             return dividendo / divisor;
         }
