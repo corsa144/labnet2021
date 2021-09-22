@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorsaroCristian.NorthwindTP4.InterfazUsuario", "CorsaroCristian.NorthwindTP4.InterfazUsuario.csproj", "{3B565942-F132-4021-9279-AAE6894B492A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorsaroCristian.NorthwindTP4.Datos", "..\CorsaroCristian.NorthwindTP4.Datos\CorsaroCristian.NorthwindTP4.Datos.csproj", "{438EE3C1-BD14-4305-BA0C-3D86710D91FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorsaroCristian.NorthwindTP4.Entidades", "..\CorsaroCristian.NorthwindTP4.Entidades\CorsaroCristian.NorthwindTP4.Entidades.csproj", "{3404FC68-6DA6-4EA0-9D37-89BB83B14691}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorsaroCristian.NorthwindTP4.Logica", "..\CorsaroCristian.NorthwindTP4.Logica\CorsaroCristian.NorthwindTP4.Logica.csproj", "{398D62CC-AF20-44E0-A067-6BAC491CC715}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltaPruebaUnitaria", "..\AltaPruebaUnitaria\AltaPruebaUnitaria.csproj", "{9046D146-0F90-4AE3-83BB-9A05E0B3A3D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B565942-F132-4021-9279-AAE6894B492A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B565942-F132-4021-9279-AAE6894B492A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B565942-F132-4021-9279-AAE6894B492A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B565942-F132-4021-9279-AAE6894B492A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{438EE3C1-BD14-4305-BA0C-3D86710D91FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{438EE3C1-BD14-4305-BA0C-3D86710D91FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{438EE3C1-BD14-4305-BA0C-3D86710D91FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{438EE3C1-BD14-4305-BA0C-3D86710D91FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3404FC68-6DA6-4EA0-9D37-89BB83B14691}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3404FC68-6DA6-4EA0-9D37-89BB83B14691}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3404FC68-6DA6-4EA0-9D37-89BB83B14691}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3404FC68-6DA6-4EA0-9D37-89BB83B14691}.Release|Any CPU.Build.0 = Release|Any CPU
+		{398D62CC-AF20-44E0-A067-6BAC491CC715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{398D62CC-AF20-44E0-A067-6BAC491CC715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{398D62CC-AF20-44E0-A067-6BAC491CC715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{398D62CC-AF20-44E0-A067-6BAC491CC715}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9046D146-0F90-4AE3-83BB-9A05E0B3A3D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9046D146-0F90-4AE3-83BB-9A05E0B3A3D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9046D146-0F90-4AE3-83BB-9A05E0B3A3D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9046D146-0F90-4AE3-83BB-9A05E0B3A3D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4AD9003-D9F7-4DA9-AE99-DCD5A733A5F4}
+	EndGlobalSection
+EndGlobal
