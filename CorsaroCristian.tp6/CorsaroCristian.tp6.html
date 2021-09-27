@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+        <meta charset="utf-8">
+		<title>Página de Cristian Corsaro TP6</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src='./CorsaroCristian.tp6.js'></script>
+        <link rel="stylesheet" href='./estilos.css'/>
+	</head>
+
+    <body>
+        <div id="page">
+        
+        <div id="header">
+            <h1>CONTACTO</h1>
+        </div>
+        
+        <!-- contenedor -->
+        
+        
+        <div id="wrapper">
+        
+        <!-- contacto -->
+            
+            <div id="completa">
+            
+            <h3>Completa tus datos:</h3>
+            
+
+            </div>
+            
+            <!-- fin menu -->
+            
+            <!-- cuerpo -->
+            
+            <div id="formulario">
+                
+                <form onsubmit="return false">
+                    
+                    <fieldset name="Informacion personal">
+                        <legend>Informacion personal</legend>
+                        Nombre: <br/>
+                        <input type="text" name="nombre" id="nombre" /><br />
+
+                        Apellidos: <br/>
+                        <input type="text" name="apellidos" id="apellido"/><br />
+                        
+                        Edad: <br/>
+                        <input type="text" name="edad" id="edad"/><br />
+                        
+                        <input type="radio" name="sexo" value="masculino" />Maculino <br />
+
+                        <input type="radio" name="sexo" value="femenino" />Femenino <br />
+
+                        <input type="radio" name="sexo" value="otro" />Otro <br />                
+                    </fieldset>
+            
+                    <fieldset name="Informacion adicional">
+                        <legend>Informacion adicional</legend>
+                        Empresa: <br />
+                        <input type="text" name="empresa" id="empresa"/><br />
+
+                    </fieldset>
+                    
+                    <p><button id="botonEnviar">Enviar formulario</button></p>
+                    <p><button id="limpiar">Vaciar los campos</button></p>
+                </form>
+                
+                </div>
+                
+                <!-- fin cuerpo -->
+                
+            </div>
+        
+        <!-- fin contenedor -->
+            
+            
+        </div>
+        
+    </body>
+</html>
+
+
+
+
+
+
+

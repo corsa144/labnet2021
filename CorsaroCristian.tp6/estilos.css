@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(46, 43, 226);
+    color:cornsilk;
+} 
+
+#formulario {
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px;
+    margin: auto;
+    background-color: black;
+    opacity: 0.8;
+}
