@@ -19,16 +19,38 @@ namespace CorsaroCristian.NorthwindTP4.Logica
 
         public void Add(Customers customer)
         {
-            contexto.Customers.Add(customer);
-            contexto.SaveChanges();
+            try
+            {
+                contexto.Customers.Add(customer);
+                contexto.SaveChanges();
+            }
+            catch(ArgumentNullException ex)
+            {
+                throw new CustomException(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                throw new CustomException(ex.Message);
+            }
+
         }
 
         public void Delete(int id)
         {
             //var customerDemographicsAEliminar = contexto.CustomerDemographics.First(c => c.CustomerTypeID == idType);
-            var customerAEliminar = contexto.Customers.Find(id);
-            contexto.Customers.Remove(customerAEliminar);
-            contexto.SaveChanges();
+            try
+            {
+                var customerAEliminar = contexto.Customers.Find(id);
+                contexto.Customers.Remove(customerAEliminar);
+                contexto.SaveChanges();
+            }catch(ArgumentOutOfRangeException ex)
+            {
+                throw new CustomException(ex.Message);
+            }catch(Exception ex)
+            {
+                throw new CustomException(ex.Message);
+            }
+
         }
         /// <summary>
         /// Se modifican los siguientes campos: Adress, Fax, Phone, y PostalCode.
@@ -36,19 +58,29 @@ namespace CorsaroCristian.NorthwindTP4.Logica
         /// <param name="customer"></param>
         public void Update(Customers customer)
         {
-            var customerUpdate = contexto.Customers.Find(customer.CustomerID);
-            customerUpdate.Address = customer.Address;
-            customerUpdate.Fax = customer.Fax;
-            customerUpdate.Phone = customer.Phone;
-            customerUpdate.PostalCode = customer.PostalCode;
-            customerUpdate.City = customer.City;
-            customerUpdate.CompanyName = customer.CompanyName;
-            customerUpdate.ContactName = customer.ContactName;
-            customerUpdate.ContactTitle = customer.ContactTitle;
-            customerUpdate.Country = customer.Country;
-            customerUpdate.Region = customer.Region;
+            try
+            {
+                var customerUpdate = contexto.Customers.Find(customer.CustomerID);
+                customerUpdate.Address = customer.Address;
+                customerUpdate.Fax = customer.Fax;
+                customerUpdate.Phone = customer.Phone;
+                customerUpdate.PostalCode = customer.PostalCode;
+                customerUpdate.City = customer.City;
+                customerUpdate.CompanyName = customer.CompanyName;
+                customerUpdate.ContactName = customer.ContactName;
+                customerUpdate.ContactTitle = customer.ContactTitle;
+                customerUpdate.Country = customer.Country;
+                customerUpdate.Region = customer.Region;
 
-            contexto.SaveChanges();
+                contexto.SaveChanges();
+            }catch(InvalidOperationException ex)
+            {
+                throw new CustomException(ex.Message);
+            }catch(Exception ex)
+            {
+                throw new CustomException(ex.Message);
+            }
+
         }
     }
 }

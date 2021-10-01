@@ -65,7 +65,7 @@ namespace CorsaroCristian.NorthwindTP4.InterfazUsuario
                                 Customers customers = new Customers();
                                 customers = AltaCustomer.AltaCliente(customers, mensaje);
                                 customersLogics.Add(customers);
-                            }catch(Exception ex)
+                            }catch(CustomException ex)
                             {
                                 Console.WriteLine($"No se pudo hacer el alta - {ex.Message}");
                             }
@@ -101,7 +101,7 @@ namespace CorsaroCristian.NorthwindTP4.InterfazUsuario
                                 mensaje = Console.ReadLine();
                                 numeroId = int.Parse(mensaje);
                                 customersLogics.Delete(numeroId);
-                            }catch(Exception ex)
+                            }catch(CustomException ex)
                             {
                                 Console.WriteLine($"No se pudo dar de baja {mensaje} - {ex.Message}");
                             }
@@ -139,7 +139,7 @@ namespace CorsaroCristian.NorthwindTP4.InterfazUsuario
                                 customers = AltaCustomer.AltaCliente(customers, mensaje);
                                 customersLogics.Update(customers);
                             }
-                            catch (Exception ex)
+                            catch (CustomException ex)
                             {
                                 Console.WriteLine($"No se pudo modificar - {ex.Message}");
                             }
@@ -168,9 +168,8 @@ namespace CorsaroCristian.NorthwindTP4.InterfazUsuario
                             }
                             break;
                         case 10:
-                            CustomersLogic customersLogic = new CustomersLogic();
 
-                            foreach (Customers customer in customersLogic.GetAll())
+                            foreach (Customers customer in customersLogics.GetAll())
                             {
                                 Console.WriteLine($"{customer.ContactName} - {customer.Country} - {customer.CompanyName}");
                             }
@@ -178,8 +177,7 @@ namespace CorsaroCristian.NorthwindTP4.InterfazUsuario
                         case 11:
                             try
                             {
-                                OrdersLogic ordersLogic = new OrdersLogic();
-                                foreach (Orders order in ordersLogic.GetAll())
+                                foreach (Orders order in ordersLogics.GetAll())
                                 {
                                     Console.WriteLine($"{order.EmployeeID} - {order.CustomerID} - {order.OrderID}");
                                 }
@@ -190,8 +188,7 @@ namespace CorsaroCristian.NorthwindTP4.InterfazUsuario
 
                             break;
                         case 12:
-                            ShippersLogic shippersLogic = new ShippersLogic();
-                            foreach (Shippers shipper in shippersLogic.GetAll())
+                            foreach (Shippers shipper in shippersLogics.GetAll())
                             {
                                 Console.WriteLine($"{shipper.CompanyName} - {shipper.Phone} - {shipper.ShipperID}");
                             }

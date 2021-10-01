@@ -1,4 +1,5 @@
 ﻿using CorsaroCristian.NorthwindTP4.Entidades;
+using CorsaroCristian.NorthwindTP4.Logica;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,50 +12,80 @@ namespace CorsaroCristian.NorthwindTP4.InterfazUsuario
     {
         public static Customers AltaCliente(Customers customers, string mensaje)
         {
+            
             customers = new Customers();
+            do
+            {
+                Console.WriteLine("Ingrese CustomerId [5 letras]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.ValidateStringLength(mensaje, 5));
 
-            Console.WriteLine("Ingrese CustomerId [5 letras]:");
-            mensaje = Console.ReadLine();
             customers.CustomerID = mensaje;
+            do
+            {
+                Console.WriteLine("Ingrese Adress [Direccion]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.ValidateStringLength(mensaje, 60));
 
-            Console.WriteLine("Ingrese Adress [Direccion]:");
-            mensaje = Console.ReadLine();
             customers.Address = mensaje;
-
-            Console.WriteLine("Ingrese City [ciudad]:");
-            mensaje = Console.ReadLine();
+            do
+            {
+                Console.WriteLine("Ingrese City [ciudad]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.ValidateStringLength(mensaje, 15));
             customers.City = mensaje;
+            do
+            {
+                Console.WriteLine("Ingrese CompanyName [compania]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.ValidateStringLength(mensaje, 40));
 
-            Console.WriteLine("Ingrese CompanyName [compania]:");
-            mensaje = Console.ReadLine();
             customers.CompanyName = mensaje;
-
-            Console.WriteLine("Ingrese ContactName [conatacto]:");
-            mensaje = Console.ReadLine();
+            do
+            {
+                Console.WriteLine("Ingrese ContactName [conatacto]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.ValidateStringLength(mensaje, 30));
             customers.ContactName = mensaje;
+            do
+            {
+                Console.WriteLine("Ingrese ContactTitle [titulo]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.ValidateStringLength(mensaje, 30));
 
-            Console.WriteLine("Ingrese ContactTitle [titulo]:");
-            mensaje = Console.ReadLine();
             customers.ContactTitle = mensaje;
-
-            Console.WriteLine("Ingrese Country [pais]:");
-            mensaje = Console.ReadLine();
+            do
+            {
+                Console.WriteLine("Ingrese Country [pais]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.ValidateStringLength(mensaje, 15));
             customers.Country = mensaje;
-
-            Console.WriteLine("Ingrese Fax:");
-            mensaje = Console.ReadLine();
+            do
+            {
+                Console.WriteLine("Ingrese Fax:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.ValidateStringLength(mensaje, 24));
             customers.Fax = mensaje;
+            do
+            {
+                Console.WriteLine("Ingrese Phone [telefono]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.ValidateStringLength(mensaje, 24));
 
-            Console.WriteLine("Ingrese Phone [telefono]:");
-            mensaje = Console.ReadLine();
             customers.Phone = mensaje;
+            do
+            {
+                Console.WriteLine("Ingrese PostalCode [codigo postal]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.ValidateStringLength(mensaje, 10));
 
-            Console.WriteLine("Ingrese PostalCode [codigo postal]:");
-            mensaje = Console.ReadLine();
             customers.PostalCode = mensaje;
+            do
+            {
+                Console.WriteLine("Ingrese Region:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.ValidateStringLength(mensaje, 15));
 
-            Console.WriteLine("Ingrese Region:");
-            mensaje = Console.ReadLine();
             customers.Region = mensaje;
 
             return customers;

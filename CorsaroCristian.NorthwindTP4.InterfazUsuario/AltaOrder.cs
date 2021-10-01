@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CorsaroCristian.NorthwindTP4.Logica;
 
 namespace CorsaroCristian.NorthwindTP4.InterfazUsuario
 {
@@ -14,61 +15,100 @@ namespace CorsaroCristian.NorthwindTP4.InterfazUsuario
             order = new Orders();
             decimal dinero;
             int numero;
-            Console.WriteLine("Ingrese orderDate [fecha]:");
-            mensaje = Console.ReadLine();
+            do
+            {
+                Console.WriteLine("Ingrese orderDate [fecha]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.IsDate(mensaje));
+
             DateTime parsedDate = DateTime.Parse(mensaje);
             order.OrderDate = parsedDate;
+            do
+            {
+                Console.WriteLine("Ingrese RequiredDate [fecha]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.IsDate(mensaje));
 
-            Console.WriteLine("Ingrese RequiredDate [fecha]:");
-            mensaje = Console.ReadLine();
             parsedDate = DateTime.Parse(mensaje);
             order.RequiredDate = parsedDate;
+            do
+            {
+                Console.WriteLine("Ingrese ShippedDate [fecha]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.IsDate(mensaje));
 
-            Console.WriteLine("Ingrese ShippedDate [fecha]:");
-            mensaje = Console.ReadLine();
             parsedDate = DateTime.Parse(mensaje);
             order.ShippedDate = parsedDate;
+            do
+            {
+                Console.WriteLine("Ingrese ShipVia [numero]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.IsNumber(mensaje));
 
-            Console.WriteLine("Ingrese ShipVia [numero]:");
-            mensaje = Console.ReadLine();
             numero = int.Parse(mensaje);
             order.ShipVia = numero;
+            do
+            {
+                Console.WriteLine("Ingrese Freight [numero]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.IsFloat(mensaje));
 
-            Console.WriteLine("Ingrese Freight [numero]:");
-            mensaje = Console.ReadLine();
             dinero = decimal.Parse(mensaje);
             order.Freight = numero;
+            do
+            {
+                Console.WriteLine("Ingrese ShipName [nombre]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.ValidateStringLength(mensaje, 40));
 
-            Console.WriteLine("Ingrese ShipName [nombre]:");
-            mensaje = Console.ReadLine();
             order.ShipName = mensaje;
+            do
+            {
+                Console.WriteLine("Ingrese ShipAdress [direccion]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.ValidateStringLength(mensaje, 60));
 
-            Console.WriteLine("Ingrese ShipAdress [direccion]:");
-            mensaje = Console.ReadLine();
             order.ShipAddress = mensaje;
+            do
+            {
+                Console.WriteLine("Ingrese ShipCity [ciudad]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.ValidateStringLength(mensaje, 15));
 
-            Console.WriteLine("Ingrese ShipCity [ciudad]:");
-            mensaje = Console.ReadLine();
             order.ShipCity = mensaje;
+            do
+            {
+                Console.WriteLine("Ingrese ShipRegion [region]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.ValidateStringLength(mensaje, 15));
 
-            Console.WriteLine("Ingrese ShipRegion [region]:");
-            mensaje = Console.ReadLine();
             order.ShipRegion = mensaje;
+            do
+            {
+                Console.WriteLine("Ingrese ShipPostalCode [codigo postal]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.ValidateStringLength(mensaje, 10));
 
-            Console.WriteLine("Ingrese ShipPostalCode [codigo postal]:");
-            mensaje = Console.ReadLine();
             order.ShipPostalCode = mensaje;
+            do
+            {
+                Console.WriteLine("Ingrese ShipCountry [estado]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.ValidateStringLength(mensaje, 15));
 
-            Console.WriteLine("Ingrese ShipCountry [estado]:");
-            mensaje = Console.ReadLine();
             order.ShipCountry = mensaje;
-
-            Console.WriteLine("Ingrese CustomerId [letras]:");
-            mensaje = Console.ReadLine();
+            do
+            {
+                Console.WriteLine("Ingrese CustomerId [letras]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.ValidateStringLength(mensaje, 5));
             order.CustomerID = mensaje;
+            do
+            {
+                Console.WriteLine("Ingrese EmpleyeeId [numero]:");
+                mensaje = Console.ReadLine();
+            } while (!Validations.IsNumber(mensaje));
 
-            Console.WriteLine("Ingrese EmpleyeeId [numero]:");
-            mensaje = Console.ReadLine();
             numero = int.Parse(mensaje);
             order.EmployeeID = numero;
 
