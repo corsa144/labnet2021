@@ -77,7 +77,7 @@ namespace CorsaroCristian.NorthwindTP4.InterfazUsuario
                                 order = AltaOrder.AltaOrders(order, mensaje);
                                 ordersLogics.Add(order);
                                 
-                            }catch(Exception ex)
+                            }catch(CustomException ex)
                             {
                                 Console.WriteLine($"No se pudo hacer el alta - {ex.Message}");
                             }
@@ -88,7 +88,7 @@ namespace CorsaroCristian.NorthwindTP4.InterfazUsuario
                                 Shippers shipper = new Shippers();
                                 shipper = AltaShipper.AltaShippers(shipper, mensaje);
                                 shippersLogics.Add(shipper);
-                            }catch(Exception ex)
+                            }catch(CustomException ex)
                             {
                                 Console.WriteLine($"No se pudo hacer el alta - {ex.Message}");
                             }
@@ -114,7 +114,7 @@ namespace CorsaroCristian.NorthwindTP4.InterfazUsuario
                                 numeroId = int.Parse(mensaje);
                                 ordersLogics.Delete(numeroId);
                             }
-                            catch (Exception ex)
+                            catch (CustomException ex)
                             {
                                 Console.WriteLine($"No se pudo dar de baja {mensaje} - {ex.Message}");
                             }
@@ -127,7 +127,7 @@ namespace CorsaroCristian.NorthwindTP4.InterfazUsuario
                                 numeroId = int.Parse(mensaje);
                                 shippersLogics.Delete(numeroId);
                             }
-                            catch (Exception ex)
+                            catch (CustomException ex)
                             {
                                 Console.WriteLine($"No se pudo dar de baja {mensaje} - {ex.Message}");
                             }
@@ -150,7 +150,7 @@ namespace CorsaroCristian.NorthwindTP4.InterfazUsuario
                                 Orders order = new Orders();
                                 order = AltaOrder.AltaOrders(order, mensaje);
                                 ordersLogics.Update(order);
-                            }catch(Exception ex)
+                            }catch(CustomException ex)
                             {
                                 Console.WriteLine($"No se pudo modificar - {ex.Message}");
                             }
@@ -162,7 +162,7 @@ namespace CorsaroCristian.NorthwindTP4.InterfazUsuario
                                 shipper = AltaShipper.AltaShippers(shipper, mensaje);
                                 shippersLogics.Update(shipper);
                             }
-                            catch (Exception ex)
+                            catch (CustomException ex)
                             {
                                 Console.WriteLine($"No se pudo modificar - {ex.Message}");
                             }

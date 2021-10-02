@@ -24,7 +24,7 @@ namespace CorsaroCristian.NorthwindTP4.Logica
                 contexto.Customers.Add(customer);
                 contexto.SaveChanges();
             }
-            catch(ArgumentNullException ex)
+            catch(NotSupportedException ex)
             {
                 throw new CustomException(ex.Message);
             }

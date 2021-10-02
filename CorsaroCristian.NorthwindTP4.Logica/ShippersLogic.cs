@@ -17,16 +17,36 @@ namespace CorsaroCristian.NorthwindTP4.Logica
         }
         public void Add(Shippers shipper)
         {
-            contexto.Shippers.Add(shipper);
-            contexto.SaveChanges();
+            try
+            {
+                contexto.Shippers.Add(shipper);
+                contexto.SaveChanges();
+            }catch(NotSupportedException ex)
+            {
+                throw new CustomException(ex.Message);
+            }catch(Exception ex)
+            {
+                throw new CustomException(ex.Message);
+            }
+
         }
 
         public void Delete(int id)
         {
-            //var customerDemographicsAEliminar = contexto.CustomerDemographics.First(c => c.CustomerTypeID == idType);
-            var shipperAEliminar = contexto.Shippers.Find(id);
-            contexto.Shippers.Remove(shipperAEliminar);
-            contexto.SaveChanges();
+            try
+            {
+                //var customerDemographicsAEliminar = contexto.CustomerDemographics.First(c => c.CustomerTypeID == idType);
+                var shipperAEliminar = contexto.Shippers.Find(id);
+                contexto.Shippers.Remove(shipperAEliminar);
+                contexto.SaveChanges();
+            }catch(ArgumentOutOfRangeException ex)
+            {
+                throw new CustomException(ex.Message);
+            }catch(Exception ex)
+            {
+                throw new CustomException(ex.Message);
+            }
+
         }
         /// <summary>
         /// Los suguientes campos pueden modificarse: Phone, CompanyName y Orders.
@@ -34,11 +54,21 @@ namespace CorsaroCristian.NorthwindTP4.Logica
         /// <param name="shipper"></param>
         public void Update(Shippers shipper)
         {
-            var shipperUpdate = contexto.Shippers.Find(shipper.ShipperID);
-            shipperUpdate.Phone = shipper.Phone;
-            shipperUpdate.CompanyName = shipper.CompanyName;
+            try
+            {
+                var shipperUpdate = contexto.Shippers.Find(shipper.ShipperID);
+                shipperUpdate.Phone = shipper.Phone;
+                shipperUpdate.CompanyName = shipper.CompanyName;
 
-            contexto.SaveChanges();
+                contexto.SaveChanges();
+            }catch(InvalidOperationException ex)
+            {
+                throw new CustomException(ex.Message);
+            }catch(Exception ex)
+            {
+                throw new CustomException(ex.Message);
+            }
+
         }
     }
 }

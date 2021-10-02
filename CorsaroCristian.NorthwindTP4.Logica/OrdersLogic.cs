@@ -18,16 +18,36 @@ namespace CorsaroCristian.NorthwindTP4.Logica
 
         public void Add(Orders orders)
         {
-            contexto.Orders.Add(orders);
-            contexto.SaveChanges();
+            try
+            {
+                contexto.Orders.Add(orders);
+                contexto.SaveChanges();
+            } catch (NotSupportedException ex)
+            {
+                throw new CustomException(ex.Message);
+            } catch (Exception ex)
+            {
+                throw new CustomException(ex.Message);
+            }
+
         }
 
         public void Delete(int id)
         {
-            var orderAEliminar = contexto.Orders.First(o => o.OrderID == id);
-            //var orderAEliminar = contexto.Orders.Find(id);
-            contexto.Orders.Remove(orderAEliminar);
-            contexto.SaveChanges();
+            try
+            {
+                var orderAEliminar = contexto.Orders.First(o => o.OrderID == id);
+                //var orderAEliminar = contexto.Orders.Find(id);
+                contexto.Orders.Remove(orderAEliminar);
+                contexto.SaveChanges();
+            }catch(ArgumentOutOfRangeException ex)
+            {
+                throw new CustomException(ex.Message);
+            }catch(Exception ex)
+            {
+                throw new CustomException(ex.Message);
+            }
+
         }
         /// <summary>
         /// Los siguientes campos pueden modificarse: Freight, OrderDate, Customers y RequiredDate.
@@ -35,21 +55,31 @@ namespace CorsaroCristian.NorthwindTP4.Logica
         /// <param name="order"></param>
         public void Update(Orders order)
         {
-            var orderUpdate = contexto.Orders.Find(order.OrderID);
-            orderUpdate.Freight = order.Freight;
-            orderUpdate.OrderDate = order.OrderDate;
-            orderUpdate.Customers = order.Customers;
-            orderUpdate.RequiredDate = order.RequiredDate;
-            orderUpdate.ShipAddress = order.ShipAddress;
-            orderUpdate.ShipCity = order.ShipCity;
-            orderUpdate.ShipCountry = order.ShipCountry;
-            orderUpdate.ShipName = order.ShipName;
-            orderUpdate.ShippedDate = order.ShippedDate;
-            orderUpdate.ShipPostalCode = order.ShipPostalCode;
-            orderUpdate.ShipRegion = order.ShipRegion;
-            orderUpdate.ShipVia = order.ShipVia;
-            
-            contexto.SaveChanges();
+            try
+            {
+                var orderUpdate = contexto.Orders.Find(order.OrderID);
+                orderUpdate.Freight = order.Freight;
+                orderUpdate.OrderDate = order.OrderDate;
+                orderUpdate.Customers = order.Customers;
+                orderUpdate.RequiredDate = order.RequiredDate;
+                orderUpdate.ShipAddress = order.ShipAddress;
+                orderUpdate.ShipCity = order.ShipCity;
+                orderUpdate.ShipCountry = order.ShipCountry;
+                orderUpdate.ShipName = order.ShipName;
+                orderUpdate.ShippedDate = order.ShippedDate;
+                orderUpdate.ShipPostalCode = order.ShipPostalCode;
+                orderUpdate.ShipRegion = order.ShipRegion;
+                orderUpdate.ShipVia = order.ShipVia;
+
+                contexto.SaveChanges();
+            }catch(InvalidOperationException ex)
+            {
+                throw new CustomException(ex.Message);
+            }catch(Exception ex)
+            {
+                throw new CustomException(ex.Message);
+            }
+
         }
     }
 }
