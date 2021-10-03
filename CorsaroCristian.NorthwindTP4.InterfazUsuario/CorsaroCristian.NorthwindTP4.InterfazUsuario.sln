@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorsaroCristian.NorthwindTP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltaPruebaUnitaria", "..\AltaPruebaUnitaria\AltaPruebaUnitaria.csproj", "{9046D146-0F90-4AE3-83BB-9A05E0B3A3D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorsaroCristian.MVCTP7", "..\CorsaroCristian.MVCTP7.CRUD\CorsaroCristian.MVCTP7.csproj", "{D986A4C4-1AC7-4668-831A-866BB515C06B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{9046D146-0F90-4AE3-83BB-9A05E0B3A3D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9046D146-0F90-4AE3-83BB-9A05E0B3A3D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9046D146-0F90-4AE3-83BB-9A05E0B3A3D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D986A4C4-1AC7-4668-831A-866BB515C06B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D986A4C4-1AC7-4668-831A-866BB515C06B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D986A4C4-1AC7-4668-831A-866BB515C06B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D986A4C4-1AC7-4668-831A-866BB515C06B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

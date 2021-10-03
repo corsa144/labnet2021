@@ -1,0 +1,21 @@
+﻿
+@model CorsaroCristian.MVCTP7.Models.OrdersView
+@{
+    ViewBag.Title = "Orders page";
+}
+
+<h1>Vista para insertar</h1>
+
+@using (Html.BeginForm("Insert", "Orders", FormMethod.Post))
+{
+    if (@ViewContext.RouteData.Values["id"] != null)
+    {
+        <label> OrderId:</label>@ViewContext.RouteData.Values["id"]
+        @Html.TextBoxFor(o => o.Id, new { @Value = @ViewContext.RouteData.Values["id"], @hidden="true" })
+    }
+
+
+    <label> Freight: </label> @Html.TextBoxFor(o => o.Freight)
+    <label> OrderDate: </label> @Html.TextBoxFor(o => o.OrderDate)
+    <input type="submit" class="btn btn-success" value="Guardar" />
+}

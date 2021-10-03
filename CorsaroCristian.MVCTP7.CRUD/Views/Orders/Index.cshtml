@@ -1,0 +1,38 @@
+﻿@model List<CorsaroCristian.MVCTP7.Models.OrdersView>
+@{
+    ViewBag.Title = "Orders page";
+}
+
+<h1>    Indice de ordenes.    </h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id order</th>
+            <th scope="col">Freight order </th>
+            <th scope="col">Date Order</th>
+            <th scope="col">Action</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var order in Model)
+        {
+            <tr>
+                <th scope="row">@order.Id</th>
+                <td>@order.Freight </td>
+                <td>@order.OrderDate</td>
+                <td>@Html.ActionLink("Borrar", "Delete", new { id = order.Id }, new { onclick = "return confirm('Seguro que quiere borrar?')" })</td>
+                <td>@Html.ActionLink("Modificar", "Insert", "Orders", new { id = order.Id}, new { })</td>
+            </tr>
+        }
+    </tbody>
+
+
+</table>
+
+<div>
+    @Html.ActionLink("Insertar nueva orden", "Insert", "Orders")
+</div>
+
