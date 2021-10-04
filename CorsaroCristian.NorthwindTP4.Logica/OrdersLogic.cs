@@ -15,7 +15,10 @@ namespace CorsaroCristian.NorthwindTP4.Logica
         {
             return contexto.Orders.ToList();
         }
-
+        public Orders Get(int id)
+        {
+            return contexto.Orders.FirstOrDefault(o => o.OrderID == id);
+        }
         public void Add(Orders orders)
         {
             try

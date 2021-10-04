@@ -59,7 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CorsaroCristian.NorthwindTP4.Entidades\CorsaroCristian.NorthwindTP4.Entidades.csproj">
-      <Project>{3404FC68-6DA6-4EA0-9D37-89BB83B14691}</Project>
+      <Project>{3404fc68-6da6-4ea0-9d37-89bb83b14691}</Project>
       <Name>CorsaroCristian.NorthwindTP4.Entidades</Name>
     </ProjectReference>
   </ItemGroup>

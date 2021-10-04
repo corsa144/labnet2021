@@ -3,6 +3,7 @@ using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
+using CorsaroCristian;
 
 namespace CorsaroCristian.NorthwindTP4.Datos
 {
@@ -46,5 +47,7 @@ namespace CorsaroCristian.NorthwindTP4.Datos
                 .WithOptional(e => e.Shippers)
                 .HasForeignKey(e => e.ShipVia);
         }
+
+        //public System.Data.Entity.DbSet<CorsaroCristian.MVCTP7.Models.OrdersView> OrdersViews { get; set; }
     }
 }

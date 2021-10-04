@@ -64,7 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CorsaroCristian.NorthwindTP4.Datos\CorsaroCristian.NorthwindTP4.Datos.csproj">
-      <Project>{438EE3C1-BD14-4305-BA0C-3D86710D91FD}</Project>
+      <Project>{438ee3c1-bd14-4305-ba0c-3d86710d91fd}</Project>
       <Name>CorsaroCristian.NorthwindTP4.Datos</Name>
     </ProjectReference>
     <ProjectReference Include="..\CorsaroCristian.NorthwindTP4.Entidades\CorsaroCristian.NorthwindTP4.Entidades.csproj">
