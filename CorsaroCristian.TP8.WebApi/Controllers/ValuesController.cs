@@ -9,6 +9,7 @@ namespace CorsaroCristian.TP8.WebApi.Controllers
 {
     public class ValuesController : ApiController
     {
+        OrdersController ordersController = new OrdersController();
         // GET api/values
         public IEnumerable<string> Get()
         {
@@ -24,6 +25,7 @@ namespace CorsaroCristian.TP8.WebApi.Controllers
         // POST api/values
         public void Post([FromBody] string value)
         {
+ 
         }
 
         // PUT api/values/5

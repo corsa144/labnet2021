@@ -37,5 +37,50 @@ namespace CorsaroCristian.TP8.WebApi.Controllers
             }
 
         }
+
+        [HttpPut]
+        public Orders Put(Orders order)
+        {
+            try
+            {
+                ordersLogic.Update(order);
+                return order;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+
+        [HttpPost]
+        public Orders Post(Orders order)
+        {
+            try
+            {
+                ordersLogic.Add(order);
+                return order;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+
+        [HttpDelete]
+        public int Delete(int id)
+        {
+            try
+            {
+                ordersLogic.Delete(id);
+                return id;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+
+        }
     }
 }

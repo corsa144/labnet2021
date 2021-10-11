@@ -1,0 +1,37 @@
+﻿@model CorsaroCristian.MVCTP7.CRUD.Models.TipoNormalView
+@{
+    ViewBag.Title = "Tipo Normal page";
+}
+
+<h1>    caracteristicas de tipo normal.    </h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripcion </th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+
+        <tr>
+            <th scope="row">Damage Relation </th>
+            <td>@Model.Damage_Relations </td>
+        </tr>
+
+        <tr>
+            <th scope="row">Game Indices</th>
+            <td>@Model.Game_Indices </td>
+        </tr>
+
+        <tr>
+            <th scope="row">Generation</th>
+            <td>@Model.Generation </td>
+        </tr>
+    </tbody>
+
+
+</table>
+
